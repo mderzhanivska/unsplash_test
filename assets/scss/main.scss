@@ -75,6 +75,9 @@ header {
 			input {
 				display: inline-block;
 				}
+			input[type=checkbox] {
+				visibility: hidden;
+			}
 			}
 		}
 	}
@@ -127,7 +130,7 @@ header {
 					flex-direction: column;
 					.author {
 						font-size: 14px;
-						margin-top: 50px;
+						margin-top: 40px;
 						order: 3;
 						background-color: #eee;
 						line-height: 30px;
@@ -148,6 +151,7 @@ header {
 					}
 
 				.likes {
+					margin-top: 5px;
 					order: 1;
 					padding: 0 5px;
 					justify-content: flex-start;
@@ -156,29 +160,28 @@ header {
 					opacity: 0.8;
 					line-height: 30px;
 					border-radius: 30px;
-					
-
+					i {
+						color: red;
+					}
 				}
 
 				.download {
 					order: 2;
 					margin-top: 50px;
-					padding: 0 5px;
+					padding: 5px 7px;
 					justify-content: flex-end;
-					font-size: 14px;
+					font-size: 30px;
 					background-color: #eee;
 					line-height: 30px;
 					text-decoration: none;
 					color: #000;
-					width: 100px;
 					border-radius: 30px;
 					opacity: 0.8;
-					}
-
 				}
 			}
 		}
 	}
+}
 }
 
 
@@ -199,23 +202,22 @@ header {
 
   .modal-content {
     position: relative;
-    background-color: #fefefe;
     margin: auto;
     padding: 0;
-    border: 1px solid #888;
     width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
+    -webkit-animation-duration: 0.8s;
     animation-name: animatetop;
-    animation-duration: 0.4s;
+    animation-duration: 0.7s;
 	}
 	
   .close {
     color: #aaa;
     float: right;
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 20px;
+    color: red;
+    background-color: transparent;
+    border: 0;
 	}
 
 	.close:hover,
@@ -227,8 +229,25 @@ header {
 
 	.modal-header {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #eee;
     color: white;
+    display: none;
+    .author {
+    	display: none;
+    	background-color: #eee;
+    	text-decoration: none;
+    	color: #333;
+    	display: inline-block;
+    	border-radius: 20px;
+    	
+    	img {
+    		width: 30px; 
+    		height: 30px;
+    		border-radius: 50%;
+    		margin: 5px;
+    
+    	}
+    }
 	}
 
 	/* Modal Body */
@@ -247,7 +266,7 @@ header {
 	/* Modal Footer */
 	.modal-footer {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: transparent;
     color: white;
 	}
 
@@ -260,5 +279,23 @@ header {
 	@keyframes animatetop {
 	    from {top: -300px; opacity: 0}
 	    to {top: 0; opacity: 1}
+	}
+}
+
+#paginations {
+	display: inline-block;
+	margin: 0 auto;
+	margin-left: 38%;
+	li {
+		margin-top: 20px;
+	}
+	
+	a {
+		text-decoration: none;
+		text-transform: capitalize;
+		color: #333;
+		border: 2px solid #000;
+		padding: 5px 10px;
+		
 	}
 }

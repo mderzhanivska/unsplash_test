@@ -103,8 +103,8 @@ const modal = document.getElementById('modal');
 						>
 							<img src="${photo.urls.thumb}" alt="${(photo.description) ? photo.description : ''}">
 							<div class="info">
-								<span class="likes">Likes: ${photo.likes}</span>
-								<a class="download" href="${photo.links.download}" download>Download</a>
+								<span class="likes"><i class="fa fa-heart" aria-hidden="true"></i> ${photo.likes}</span>
+								<a class="download" href="${photo.links.download}" download><i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i></a>
 								<a class="author" href="${photo.user.links.html}"><img src="${photo.user.profile_image.small}">${photo.user.name}</a>
 							</div>
 						</div>
@@ -156,7 +156,7 @@ const modal = document.getElementById('modal');
 
 		var strDom = '';
 		for (var page of pages) {
-			strDom += `<li><a href="${page.url}">${page.rel}</a><li>`;
+			strDom += `<li class="pages"><a href="${page.url}">${page.rel}</a><li>`;
 		}
 
 		paginations.innerHTML = strDom;
