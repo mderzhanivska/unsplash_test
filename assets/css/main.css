@@ -61,8 +61,6 @@ header {
           line-height: 30px; }
         .main aside ul li input {
           display: inline-block; }
-        .main aside ul li input[type=checkbox] {
-          visibility: hidden; }
 
 .container {
   width: 80%; }
