@@ -16,5 +16,13 @@
     "unsplash-api": "^1.2.0"
   },
   "devDependencies": {},
-  "description": "test project"
+  "description": "test project",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mderzhanivska/unsplash_test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mderzhanivska/unsplash_test/issues"
+  },
+  "homepage": "https://github.com/mderzhanivska/unsplash_test#readme"
 }

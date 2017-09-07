@@ -7,17 +7,24 @@
 </head>
 <body>
 <header>
-	<a href="#">image view</a>
+	<a href="#">take a look at the photos</a>
 </header>
 
 
 	<section class="main">
+		
+		<div class="container">
+			<!-- dynamic list-photos -->
+			<ul class="list-photos"></ul>
+
+			<!-- dynamic pagination -->
+			<ul id="paginations"></ul>
+		</div>
+
 		<aside>
 			<span>filter by</span>
-			<ul class="nav">
-				<li class="button"><a href="#" class="box1">Size</a></li>
-				<li class="dropdown">
-					<ul>
+			<h2>Size</h2>
+				<ul>
 						<li class="rounded">
 							<label>
 								<input type="checkbox"  checked="checked" name='large'>
@@ -38,20 +45,13 @@
 								small
 							</label>
 						</li>
-					</ul>
-				</li>
-				<li class="button"><a href="#" class="box1">Author</a></li>
+				</ul>
+			<h2>Author</h2>
 				<!-- dynamic authors -->
 				<ul id="authors"></ul>
 			</ul>
 		</aside>
-		<div class="container">
-			<!-- dynamic list-photos -->
-			<ul class="list-photos"></ul>
 
-			<!-- dynamic pagination -->
-			<ul id="paginations"></ul>
-		</div>
 	</section>
 	
 	<div id="modal">
