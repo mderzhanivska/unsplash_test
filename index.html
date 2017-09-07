@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<title>image view</title>
+</head>
+<body>
+<header>
+	<a href="#">image view</a>
+</header>
+
+
+	<section class="main">
+		<aside>
+			<span>filter by</span>
+			<ul class="nav">
+				<li class="button"><a href="#" class="box1">Size</a></li>
+				<li class="dropdown">
+					<ul>
+						<li class="rounded">
+							<label>
+								<input type="checkbox"  checked="checked" name='large'>
+								large
+							</label>
+						</li>
+
+						<li class="rounded">
+							<label>
+								<input type="checkbox" checked="checked" name='medium'>
+								medium
+							</label>
+						</li>
+
+						<li class="rounded">
+							<label>
+								<input type="checkbox" checked="checked" name='small'>
+								small
+							</label>
+						</li>
+					</ul>
+				</li>
+				<li class="button"><a href="#" class="box1">Author</a></li>
+				<!-- dynamic authors -->
+				<ul id="authors"></ul>
+			</ul>
+		</aside>
+		<div class="container">
+			<!-- dynamic list-photos -->
+			<ul class="list-photos"></ul>
+
+			<!-- dynamic pagination -->
+			<ul id="paginations"></ul>
+		</div>
+	</section>
+	
+	<div id="modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button class="close">x</button>
+				<a href="#" class="author"><img src="" alt="author"><span></span></a>
+			</div>
+
+			<div class="modal-body">
+				<img src="#" alt="">
+			</div>
+
+			<div class="modal-footer">
+				<p class="likes">Likes: <span></span></p>
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/js/main.js"></script>
+</body>
+</html>
