@@ -24,7 +24,8 @@ header {
 
 .main {
 	display: flex;
-	margin-top: 25px 0 0 20px;
+	margin-top: 25px;
+	margin-left: 20px;
 	aside {
 	width: 20%;
 	margin-top: 20px 100px 0 0;	
@@ -232,7 +233,7 @@ header {
 	    object-position: 50% 50%;
 		}
 	}
-	
+
 	@-webkit-keyframes animatetop {
 	    from {top: -300px; opacity: 0} 
 	    to {top: 0; opacity: 1}
