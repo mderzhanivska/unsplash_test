@@ -54,6 +54,7 @@ const modal = document.getElementById('modal');
 				createAuthors(responsePhotos);
 				changeFilter();
 				pagination(xhr.getResponseHeader('link'));
+				window.scrollTo(0, 0);
 		  }
 
 		}
@@ -117,16 +118,16 @@ const modal = document.getElementById('modal');
 	}
 
 
-	function openModal() {
-		modal.classList.add('active');
+	function openModal(e) {
+		if (e.target.classList.contains('info')) {
+			const img = modal.querySelector('.modal-body > img');
+			
+			img.onload = () => {
+				modal.classList.add('active');
+			}
 
-		const author = modal.querySelector('.author');
-		author.href = this.dataset.authorUrl;
-		author.querySelector('img').src = this.dataset.authorPhoto;
-		author.querySelector('span').textContent = this.dataset.authorName;
-
-		modal.querySelector('.modal-body > img').src = this.dataset.url;
-		modal.querySelector('.likes span').textContent = this.dataset.likes;
+			img.src = this.dataset.url;
+		}
 	}
 
 	function closeModal() {
@@ -160,9 +161,10 @@ const modal = document.getElementById('modal');
 		}
 
 		paginations.innerHTML = strDom;
-		paginations.querySelectorAll('a').forEach(dom => dom.click = e => {
+		paginations.querySelectorAll('a').forEach(dom => dom.onclick = function(e) {
 			e.preventDefault;
 			request(`${this.href}&client_id=${clientId}`);
+			return false;
 		});
 	}
 
